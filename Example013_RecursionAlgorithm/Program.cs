@@ -19,9 +19,6 @@ for (int rows = 0; rows < 2; rows++)
     Console.WriteLine();
 }
 
-
-
-
 //метод создающий массив и выводящий его на экран
 void PrintArray(int[,] matr)
 {
@@ -117,6 +114,41 @@ double Fibonacci(int n)
 }
  for (int i = 1; i < 10; i++)
 {
-    Console.WriteLine(Fibonacci(i));
+    ;
 }
+
+
+
+ // На семинаре
+
+
+void Fill2DArray(int[,] a)
+{
+    for(int i = 0; i < GetLength(0); i++)       // создаются элементы массива
+    {
+        for(int j = 0; j < GetLength(1); j++)   // 
+        {                                       // элементы массива заполняются значениями
+            a[i, j] = i * 10 + j;               //
+        }
+    }
+}
+
+void Print2DArray(int[,] a)
+{
+    for(int i = 0; i < GetLength(0); i++)       //
+    {                                           //
+        for(int j = 0; j < GetLength(1); j++)   // 
+        {                                       // элементы массива выводятся на экран
+            Console.Write($"{a[i, j], 4}");     //    - в интерполяционной строке ($) указывается что выводим 
+        }                                       //      и сколько места отводим для каждого элемента (4)
+        Console.WriteLine();                    //
+    }  
+}
+
+int[,] a;
+a = new int[10, 4];                               
+
+Fill2DArray(a);
+Print2DArray(a);
+
 
